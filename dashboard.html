@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<header class="navbar-top">
+			<div class="logo">
+				<img alt="" src="icons/icon-treehouse.png">
+			</div>
+			<div class="grid-2">
+				<div class="user-profile-status">
+					<p class="bell-icon-status">&#9679;</p>
+					<img alt="" class="bell-icon" src="icons/icon-bell.svg">
+				</div>
+				<div class="user-profile-detail">
+					<img alt="" class="avatar" src="images/member-1.jpg">
+					<p>Victoria Chambers</p>
+				</div>	
+			</div>	
+		</header>
+		<main class="grid">
+			<div class="grid-2 search-menu">
+				<div class="grid-item-2 tab">
+					<p>Dashboard</p>
+				</div>
+				<div class="grid-item-2 search">
+					<form>
+				      <input type="text" placeholder="Search.." name="search">
+				      <button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+			</div>
+			<div class="alert">
+				<button>
+					<strong>Alert</strong>&nbsp;&nbsp;&nbsp;&nbsp;Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nith ultricies vehicula ut id eit. Curabitur blandit tempus portitor.
+					<i class="fa fa-close"></i>
+				</button>
+			</div>
+			<div class="grid-1 border-bottom">
+				<div>
+					<div class="grid-2-filter">
+						<p class="grid-title">TRAFFIC</p>
+						<ul class="chart-filter">
+							<li>Hourly</li>
+							<li>Daily</li>
+							<li>Weekly</li>
+							<li>Monthly</li>
+						</ul>
+					</div>
+					<canvas id="lineChart" height="80px"></canvas>
+				</div>
+			</div>
+			<div class="grid-2 border-bottom">
+				<div class="grid-item-2 border-right">
+					<div class="grid-title">DAILY TRAFFIC</div>
+					<canvas id="barChart"></canvas>
+				</div>
+				<div class="grid-item-2">
+					<div class="grid-title">MOBILE USERS</div>
+					<canvas id="pieChart"></canvas>
+				</div>
+			</div>
+			<div class="grid-1 grid-title">
+				<div>SOCIAL STATS</div>
+			</div>
+			<div class="grid-3 border-bottom">
+				<div class="social-card">
+					<div>
+						<p class="network">Twitter</p>
+						<p class="users">10,345</p>
+					</div>
+					<div class="circle">
+						<img alt="" class="icon" src="icons/icon-twitter.svg">
+					</div>
+				</div>	
+				<div class="social-card">
+					<div>
+						<p class="network">Facebook</p>
+						<p class="users">8,739</p>
+					</div>
+					<div class="circle">		
+						<img alt="" class="icon" src="icons/icon-facebook.svg">
+					</div>
+				</div>
+				<div class="social-card">
+					<div>
+						<p class="network">Google+</p>
+						<p class="users">2,530</p>
+					</div>
+					<div class="circle">
+						<img alt="" class="icon" src="icons/icon-google-plus.svg">
+					</div>
+				</div>
+ 			</div>
+			<div class="grid-2">
+				<div class="border-bottom border-right">
+					<p class="grid-title">NEW MEMBERS</p>
+					<ul class="members">
+						<li class="member border-bottom">
+							<div class="member-contact">
+								<img alt="" class="avatar" src="images/member-1.jpg">
+								<div>
+									<p>Victoria Chambers</p>
+									<p class="email">victoria.chambers80@example.com</p>
+								</div>
+							</div>
+							<p>10/15/15</p>
+						</li>
+						<li class="member border-bottom">
+							<div class="member-contact">
+								<img alt="" class="avatar" src="images/member-2.jpg">
+								<div>
+									<p>Dale Byrd</p>
+									<p class="email">dale.byrd52@example.com</p>
+								</div>
+							</div>
+							<p>10/15/15</p>
+						</li>
+						<li class="member border-bottom">
+							<div class="member-contact">
+								<img alt="" class="avatar" src="images/member-3.jpg">
+								<div>
+									<p>Dawn Wood</p>
+									<p class="email">dawn.wood16@example.com</p>
+								</div>
+							</div>
+							<p>10/15/15</p>
+						</li>
+						<li class="member">
+							<div class="member-contact">
+								<img alt="" class="avatar" src="images/member-4.jpg">
+								<div>
+									<p>Dan Oliver</p>
+									<p class="email">dan.oliver82@example.com</p>
+								</div>
+							</div>
+							<p>10/15/15</p>
+						</li>
+					</ul>
+				</div>
+				<div class="grid-item-2 border-bottom">
+					<p class="grid-title">RECENT ACTIVITY</p>
+					<ul class="members">
+						<li class="member border-bottom">
+							<div class="member-contact">
+								<img alt="" class="avatar" src="images/member-1.jpg">
+								<div>
+									<p>Victoria Chambers commented on YourApp's SEO Tips</p>
+									<p class="time-ago">4 hours ago</p>
+								</div>
+							</div>
+							<i class="arrow"></i>
+						</li>
+						<li class="member border-bottom">
+							<div class="member-contact">
+								<img alt="" class="avatar" src="images/member-2.jpg">
+								<div>
+									<p>Dale Byrd like the post Facebook's Changes for 2016</p>
+									<p class="time-ago">5 hours ago</p>
+								</div>
+							</div>
+							<i class="arrow"></i>
+						</li>
+						<li class="member border-bottom">
+							<div class="member-contact">
+								<img alt="" class="avatar" src="images/member-3.jpg">
+								<div>
+									<p>Dawn Wood commented on Facebook's Changes for 2016</p>
+									<p class="time-ago">5 hours ago</p>
+								</div>
+							</div>
+							<i class="arrow"></i>
+						</li>
+						<li class="member">
+							<div class="member-contact">
+								<img alt="" class="avatar" src="images/member-4.jpg">
+								<div>
+									<p>Dan Oliver posted YourApp's SEO Tips</p>
+									<p class="time-ago">1 day ago</p>
+								</div>
+							</div>
+							<i class="arrow"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="grid-item-2 border-right">
+					<form id="user-message-form">
+						<p class="grid-title">MESSAGE USER</p>
+						<input class="search" type="text" placeholder="Search for User">
+						<input class="message" type="text" placeholder="Message for User"></input>
+						<button class="btn-send">SEND</button>
+					</form>
+				</div>
+				<div class="grid-item-2">
+					<p class="grid-title">SETTINGS</p>
+					<form id="user-settings-form">
+						<div class="switches grid-2">
+							<div class="grid-2">
+								<p>Send Email Notifications</p>
+								<label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								</label>
+							</div>
+							<div class="grid-2">
+								<p>Set Profile to Public</p>
+		  						<label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<select>
+							<option>Select Timezone</option>
+						</select>
+						<div class="grid-2">
+							<button class="btn-save">SAVE</button>
+							<button class="btn-cancel">CANCEL</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+		<aside>
+			<div class="navbar-side">
+				<img alt="" src="icons/icon-dashboard.svg">
+				<img alt="" src="icons/icon-members.svg">
+				<img alt="" src="icons/icon-visits.svg">
+				<img alt="" src="icons/icon-settings.svg">
+			</div>
+		</aside>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+	<script src="js/charts/line-chart.js"></script>
+	<script src="js/charts/bar-chart.js"></script>
+	<script src="js/charts/pie-chart.js"></script>
+</body>
+</html>

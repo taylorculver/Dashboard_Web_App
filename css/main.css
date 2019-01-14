@@ -4,7 +4,7 @@
 
 *********************************/
 * {
-	/*border: solid red thin;*/
+	border: solid red thin;
 	color: grey;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
@@ -86,7 +86,12 @@ ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
-.grid-2-filter {
+.grid-2-buttons{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.grid-2-filter,
+.grid-2-user {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 }
@@ -145,11 +150,6 @@ ul {
 }
 .navbar-top .logo {
 	text-align: left;
-}
-
-.navbar-top .logo img {
-	height: auto;
-	width: 30%;
 }
 .navbar-top .user-profile-detail {
 	align-items: center;
@@ -295,6 +295,8 @@ ul {
 }
 .member a {
 	padding-left: 10px;
+	font-size: .75em;
+	font-style: italic;
 }
 .member-contact {
 	align-items: center;
@@ -313,6 +315,7 @@ ul {
 }
 .member .time-ago {
 	font-size: .75em;
+	padding-bottom: 5px;
 }
 /********************************
 
@@ -330,7 +333,7 @@ ul {
 	border-radius: 5px;
 	color: white;
 	margin: 10px 20px;
-	padding: 15px;
+	padding: 10px;
 }
 #user-message-form .search {
 	border: solid thin grey;
@@ -364,7 +367,7 @@ ul {
 }
 #user-settings-form .btn-save {
 	background-color: #7476C0;
-	padding: 15px;
+	padding: 10px;
 	margin-right: 20px;
 	border-radius: 5px;
 	border: solid thin grey;
@@ -372,7 +375,7 @@ ul {
 }
 #user-settings-form .btn-cancel {
 	background-color: grey;
-	padding: 15px;
+	padding: 10px;
 	margin-left: 20px;
 	border-radius: 5px;
 	border: solid thin grey;
@@ -386,7 +389,7 @@ ul {
 	flex-direction: column;
 }
 select {
-   margin: 20px 0px 25px 0px;
+   margin: 20px 0px 20px 0px;
    appearance: none;       /* remove default arrow */
    content: '\f078';   /* add custom arrow */
    -webkit-appearance: none; 
@@ -452,3 +455,42 @@ input:checked + .slider:after
 {  
   content:'ON';
 }
+
+/********************************
+
+	MEDIA QUERIES
+
+*********************************/
+/* Media Query on iPad */
+@media (max-width: 768px) {
+	.container {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(auto-fill, 1fr);
+	}
+	.navbar-side {
+		display: none;
+	}
+	.search-menu .search input {
+		width: 200px;
+	}
+	.navbar-top .user-profile-detail p {
+		display: none; /* Prevent text wrapping */
+	}
+}
+
+/* Media Query for Desktop */
+@media (max-width: 1175px) {
+	.grid-2,
+	.grid-2-filter,
+	.grid-3 {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+
+
+
+
+
+

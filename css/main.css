@@ -131,6 +131,11 @@ ul {
 .navbar-top .bell-icon {
 	max-height: 30px;
 	max-width: 30px;
+	transition: transform .4s ease-out;
+	transform-origin: 50% 50%;
+}
+.navbar-top .bell-icon:hover {
+	transform: rotate(25deg) rotate(-50deg);
 }
 .navbar-top .bell-icon-status {
 	color: #82C98F;	
@@ -288,6 +293,9 @@ ul {
 	padding-left: 10px;
 	text-align: left;
 }
+.member a {
+	padding-left: 10px;
+}
 .member-contact {
 	align-items: center;
 	display: flex;
@@ -354,7 +362,6 @@ ul {
 	flex-direction: column;
 	padding: 20px 20px 0px 20px;
 }
-
 #user-settings-form .btn-save {
 	background-color: #7476C0;
 	padding: 15px;
@@ -363,7 +370,6 @@ ul {
 	border: solid thin grey;
 	color: white;
 }
-
 #user-settings-form .btn-cancel {
 	background-color: grey;
 	padding: 15px;
@@ -372,17 +378,13 @@ ul {
 	border: solid thin grey;
 	color: white;
 }
-
 #user-settings-form p {
 	text-align: left;
 }
-
-
 .switches {
 	display: flex;
 	flex-direction: column;
 }
-
 select {
    margin: 20px 0px 25px 0px;
    appearance: none;       /* remove default arrow */
@@ -390,18 +392,12 @@ select {
    -webkit-appearance: none; 
    -moz-appearance: none;
 }
-
-
-
-
 .switch {
   position: relative;
   display: inline-block;
   width: 90px;
   height: 34px;
-  /*margin: 10px;*/
 }
-
 .switch input {display:none;}
 
 .slider {
@@ -416,7 +412,6 @@ select {
   transition: .4s;
    border-radius: 34px;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -429,21 +424,17 @@ select {
   transition: .4s;
   border-radius: 50%;
 }
-
 input:checked + .slider {
   background-color: #7476C0;
 }
-
 input:focus + .slider {
   box-shadow: 0 0 1px #7476C0;
 }
-
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(55px);
 }
-
 /*------ ADDED CSS ---------*/
 .slider:after
 {
@@ -461,5 +452,3 @@ input:checked + .slider:after
 {  
   content:'ON';
 }
-
-/*--------- END --------*/

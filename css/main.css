@@ -15,6 +15,9 @@ aside {
 	grid-row-start: 2;
 	grid-row-end: 3;
 }
+form {
+	display: inline-block;
+}
 
 header {
 	background-color: #7476C0;
@@ -463,71 +466,72 @@ input:checked + .slider:after
 	MEDIA QUERIES
 
 *********************************/
-/* Media Query on mobile */
-@media (max-width: 600px) {
-	.tab {
-		display: none;
-	}
-	#lineChart {
-		width: 200px;
-		height: 400px;
-	}
 
+/* Media Query on mobile */
+@media (min-width: 320px) {
+	.border-right {
+		border-right: none;
+	}
+	.container,
+	.grid-2,
+	.grid-2-filter,
+	.grid-3 {
+		grid-template-columns: 1fr;
+	}
 	.chart-filter,
 	.member {
 		flex-direction: column;
 	}
-
-	.member .arrow {
+	.logo img,
+	.navbar-side,
+	.member .arrow,
+	.navbar-top .user-profile-detail p,
+	.tab {
 		display: none;
 	}
 
-	.grid-item-2.search {
-		padding: 0;
-	}
-
-	.grid-item-2.search input {
-		width: 200px;
-	}
-
-	.logo img {
-		display: none;
-	}
-}
-
-
-
-/* Media Query on iPad */
-@media (max-width: 768px) {
-	.container {
-		grid-template-columns: 1fr;
-		grid-template-rows: repeat(auto-fill, 1fr);
-	}
-	.navbar-side {
-		display: none;
-	}
 	.search-menu .search input {
 		width: 200px;
 	}
-	.navbar-top .user-profile-detail p {
-		display: none; /* Prevent text wrapping */
-	}
 }
 
-/* Media Query for Desktop */
-@media (max-width: 1175px) {
+/* Media Query on iPad */
+@media (min-width: 768px) {
+	.border-right {
+		border-right: grey thin solid;
+	}
+
+	.container {
+		grid-template-columns: 75px 1fr;
+	}
+
 	.grid-2,
-	.grid-2-filter,
-	.grid-3 {
-		grid-template-columns: minmax(0, 1fr);
+	.grid-2-filter {
+		grid-template-columns: 1fr 1fr;
 	}
 
+	.grid-3 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.logo img,
+	.navbar-side,
+	.member .arrow,
+	.navbar-top .user-profile-detail p,
+	.tab {
+		display: flex;
+	}
+
+	.chart-filter,
+	.member {
+		flex-direction: row;
+	}
+
+	.navbar-side {
+		flex-direction: column;
+	}
+
+	.search-menu .search input {
+		width: 300px;
+	}
 }
-
-
-
-
-
-
-
-

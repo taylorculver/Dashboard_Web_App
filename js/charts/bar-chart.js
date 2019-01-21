@@ -27,6 +27,8 @@ var chart = new Chart(ctx, {
         legend: {
             display: false
         },
+        maintainAspectRatio: false,
+        responsive: true,
         scales: {
 	        yAxes: [{
 	            gridLines: {

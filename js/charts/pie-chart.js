@@ -31,6 +31,8 @@ var chart = new Chart(ctx, {
             	boxWidth: 15,
             	padding: 20,
             }
-        }
+        },
+        maintainAspectRatio: false,
+        responsive: true,
     }    
 	});
